@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19 Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+    crossorigin="anonymous"
+    ></script>
+    <script src="/js/countries.js" defer></script>
+    <script src="/js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>C19 Tracker</h1>
+        </div>
+        <div class="header-text">
+            <p>C19 Tracker - Real Time World Statistics</p>
+        </div>
+    </header>
+    <main>
+        <div class="stats">
+            <div class="latest-report">
+                <div class="country">
+                    <div class="country-name">Loading...</div>
+                    <div class="change-btn">change</div>
+                    <div class="search-country hide">
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder="Search Country...">
+                            <img class="close" src="close.svg" alt="">
+                        </div>
+                        <div class="country-list">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="total-cases">
+                    <div class="title">Total Cases</div>
+                    <div class="value">0</div>
+                    <div class="new-value">+0</div>
+                </div>
+                <div class="recovered">
+                    <div class="title">Recovered</div>
+                    <div class="value">0</div>
+                    <div class="new-value">+0</div>
+                </div>
+                <div class="deaths">
+                    <div class="title">Deaths</div>
+                    <div class="value">0</div>
+                    <div class="new-value">+0</div>
+                </div>
+            </div>
+            <div class="chart">
+                <canvas id="axes-line-chart"></canvas>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+          <div class="copyright">
+            <p>Copyright © 2020 C19 Tracker</p>
+          </div>
+        </div>
+    </footer>
+</body>
+</html>
