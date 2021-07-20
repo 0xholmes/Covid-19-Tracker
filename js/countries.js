@@ -211,6 +211,7 @@ const changeBtn = document.querySelector(".change-btn")
 const input = document.querySelector(".search-input")
 const closeBtn = document.querySelector(".close")
 const countryList = document.querySelector(".country-list")
+const overlay = document.querySelector("#overlay")
 
 // Create a country list
 function createCountryList() {
@@ -243,20 +244,28 @@ function createCountryList() {
 }
 createCountryList()
 
-// Show/Hide the list when click
+// Show/Hide the list when click + Modal feature
 changeBtn.addEventListener("click", () => {
   input.value = ""
   resetCountryList()
-  searchCountry.classList.toggle("hide")
+  searchCountry.classList.remove("hide")
   searchCountry.classList.add("fadeIn")
+  overlay.classList.add("active")
 })
 
 closeBtn.addEventListener("click", () => {
   searchCountry.classList.add("hide")
+  overlay.classList.remove("active")
 })
 
 countryList.addEventListener("click", () => {
   searchCountry.classList.add("hide")
+  overlay.classList.remove("active")
+})
+
+overlay.addEventListener("click", () => {
+  searchCountry.classList.add("hide")
+  overlay.classList.remove("active")
 })
 
 // Country filter
@@ -274,11 +283,10 @@ input.addEventListener("input", () => {
   })
 })
 
-//
+// Reset after close modal
 function resetCountryList() {
   country_list.forEach((country) => {
     const countryName = document.getElementById(country.name)
     countryName.classList.remove("hide")
   })
 }
-// Extra FEATURE: Overlay JS Simplified Course Lesson 45
