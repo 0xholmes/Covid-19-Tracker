@@ -2,4 +2,4 @@
 
 Inspo: https://github.com/CodeExplainedRepo/COVID-19_TRACKER_HTML_CSS_JAVASCRIPT
 
-Link: https://s3b8d.csb.app/
+Live Demo: https://covid-19-tracker-holmes.netlify.app/
